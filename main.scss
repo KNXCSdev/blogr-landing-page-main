@@ -4,6 +4,7 @@
   --lightred: hsl(356, 100%, 66%); //(CTA text)
   --verylightred: hsl(355, 100%, 74%); //(CTA hover background)
   --verydarkblue: hsl(208, 49%, 24%); //(headings)
+  --verydarkgray: hsla(210, 2%, 82%, 0.212); //(headings)
 
   //### Neutral
   --white: hsl(0, 0%, 100%); //(text)
@@ -15,8 +16,8 @@
 
   //Background gradient - Intro/CTA mobile nav:
 
-  --verylightred: hsl(13, 100%, 72%);
-  --lightred: hsl(353, 100%, 62%);
+  --verylightred: hsla(13, 100%, 72%, 0.95);
+  --lightred: hsla(353, 100%, 62%, 0.95);
 
   //Background gradient - body:
 
@@ -31,3 +32,158 @@
 
 // - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
 // - Weights: 400, 500, 700
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+section {
+  padding: 9.6rem 0;
+}
+
+//SECTION REUSABLE
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.description {
+  color: var(--verydarkgrayishblue);
+}
+
+.primary-heading {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.secondary-heading {
+  text-align: center;
+  color: var(--verydarkblue);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.tertiary-heading {
+  color: var(--verydarkblue);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.fourth-heading {
+  color: var(--white);
+}
+
+.btn {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+
+  &--white {
+    background-color: var(--white);
+    color: var(--lightred);
+
+    &:hover {
+      background-color: var(--verydarkgray);
+      color: var(--white);
+    }
+  }
+
+  &--border {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--white) !important;
+      color: var(--lightred);
+    }
+  }
+
+  &--none {
+    font-weight: 300;
+    color: var(--white);
+    background-color: transparent;
+  }
+}
+
+//SECTION HEADER
+.header {
+  background-image: url("/images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(to right, var(--verylightred), var(--lightred));
+  background-size: 170%;
+  background-position: center;
+  height: 50vh;
+  border-bottom-left-radius: 100px;
+  &__hero {
+    margin-top: 5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+  }
+
+  &__description {
+    color: var(--grayishblue);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+
+  &__dropdown {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    margin-left: 5rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 300;
+    a {
+      transition: all 0.3s;
+      &:link,
+      &:visited {
+        text-decoration-color: transparent;
+        color: var(--white);
+      }
+      &:hover,
+      &:active {
+        text-decoration-color: var(--white);
+      }
+    }
+  }
+}

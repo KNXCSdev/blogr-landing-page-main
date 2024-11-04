@@ -2,12 +2,152 @@
   --lightred: hsl(356, 100%, 66%);
   --verylightred: hsl(355, 100%, 74%);
   --verydarkblue: hsl(208, 49%, 24%);
+  --verydarkgray: hsla(210, 2%, 82%, 0.212);
   --white: hsl(0, 0%, 100%);
   --grayishblue: hsl(240, 2%, 79%);
   --verydarkgrayishblue: hsl(207, 13%, 34%);
   --verydarkblackblue: hsl(240, 10%, 16%);
-  --verylightred: hsl(13, 100%, 72%);
-  --lightred: hsl(353, 100%, 62%);
+  --verylightred: hsla(13, 100%, 72%, 0.95);
+  --lightred: hsla(353, 100%, 62%, 0.95);
   --verydarkgrayblue: hsl(237, 17%, 21%);
   --verydarkdesaturatedblue: hsl(237, 23%, 32%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+section {
+  padding: 9.6rem 0;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.description {
+  color: var(--verydarkgrayishblue);
+}
+
+.primary-heading {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.secondary-heading {
+  text-align: center;
+  color: var(--verydarkblue);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.tertiary-heading {
+  color: var(--verydarkblue);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.fourth-heading {
+  color: var(--white);
+}
+
+.btn {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+}
+.btn--white {
+  background-color: var(--white);
+  color: var(--lightred);
+}
+.btn--white:hover {
+  background-color: var(--verydarkgray);
+  color: var(--white);
+}
+.btn--border {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.btn--border:hover {
+  background-color: var(--white) !important;
+  color: var(--lightred);
+}
+.btn--none {
+  font-weight: 300;
+  color: var(--white);
+  background-color: transparent;
+}
+
+.header {
+  background-image: url("/images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, var(--verylightred), var(--lightred));
+  background-size: 170%;
+  background-position: center;
+  height: 50vh;
+  border-bottom-left-radius: 100px;
+}
+.header__hero {
+  margin-top: 5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.header__description {
+  color: var(--grayishblue);
+}
+.header__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+.nav__dropdown {
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  margin-left: 5rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav__item {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 300;
+}
+.nav__item a {
+  transition: all 0.3s;
+}
+.nav__item a:link, .nav__item a:visited {
+  text-decoration-color: transparent;
+  color: var(--white);
+}
+.nav__item a:hover, .nav__item a:active {
+  text-decoration-color: var(--white);
 }
