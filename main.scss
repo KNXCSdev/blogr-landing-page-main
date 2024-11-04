@@ -1,0 +1,33 @@
+:root {
+  //### Primary
+
+  --lightred: hsl(356, 100%, 66%); //(CTA text)
+  --verylightred: hsl(355, 100%, 74%); //(CTA hover background)
+  --verydarkblue: hsl(208, 49%, 24%); //(headings)
+
+  //### Neutral
+  --white: hsl(0, 0%, 100%); //(text)
+  --grayishblue: hsl(240, 2%, 79%); //(footer text)
+  --verydarkgrayishblue: hsl(207, 13%, 34%); //(body copy)
+  --verydarkblackblue: hsl(240, 10%, 16%); //(footer background)
+
+  //### Gradient
+
+  //Background gradient - Intro/CTA mobile nav:
+
+  --verylightred: hsl(13, 100%, 72%);
+  --lightred: hsl(353, 100%, 62%);
+
+  //Background gradient - body:
+
+  --verydarkgrayblue: hsl(237, 17%, 21%);
+  --verydarkdesaturatedblue: hsl(237, 23%, 32%);
+}
+
+// ### Fonts
+
+// - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+// - Weights: 300, 600
+
+// - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+// - Weights: 400, 500, 700
