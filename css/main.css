@@ -58,6 +58,7 @@ section {
   color: var(--verydarkblue);
   font-size: 3.8rem;
   font-weight: 600;
+  margin-bottom: 3rem;
 }
 
 .tertiary-heading {
@@ -161,6 +162,11 @@ section {
   text-decoration-color: var(--white);
 }
 
+.future {
+  position: relative;
+  z-index: 2;
+  background-color: var(--white);
+}
 .future__all {
   display: flex;
   justify-content: center;
@@ -177,4 +183,54 @@ section {
   width: 100%;
   height: 100%;
   transform: scale(125%) translateX(15rem);
+}
+
+.state {
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background-image: linear-gradient(to right, var(--verydarkgrayblue), var(--verydarkdesaturatedblue));
+}
+.state .container {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.state .secondary-heading {
+  text-align: left;
+  color: var(--white);
+}
+.state .description {
+  color: var(--grayishblue);
+}
+.state__img {
+  position: relative;
+  flex-basis: 50%;
+  height: 22.4rem;
+}
+.state__img::before {
+  content: "";
+  position: absolute;
+  top: -250%;
+  left: -27rem;
+  width: 90rem;
+  height: 90rem;
+  background: url("/images/bg-pattern-circles.svg");
+  background-size: cover;
+  z-index: 1;
+}
+.state__img img {
+  z-index: 2;
+}
+.state__phone {
+  position: absolute;
+  top: -15rem;
+}
+.state__desc {
+  flex-basis: 50%;
+}
+
+.free {
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
 }
