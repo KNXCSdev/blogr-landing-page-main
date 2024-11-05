@@ -35,7 +35,7 @@ section {
 }
 
 .container {
-  max-width: 150rem;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ section {
   background-image: url("/images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, var(--verylightred), var(--lightred));
   background-size: 170%;
   background-position: center;
-  height: 50vh;
+  height: 60vh;
   border-bottom-left-radius: 100px;
 }
 .header__hero {
@@ -239,9 +239,40 @@ section {
 .free .container {
   display: flex;
   align-items: center;
+  gap: 4.8rem;
 }
 .free .container img {
   width: 50%;
   height: 100%;
   object-fit: cover;
+}
+
+.footer {
+  padding: 4.8rem 0;
+  background-color: var(--verydarkblackblue);
+  border-top-right-radius: 100px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__item a:link, .footer__item a:visited {
+  text-decoration: none;
+  color: var(--grayishblue);
+  transition: all 0.3s;
+}
+.footer__item a:hover, .footer__item a:active {
+  text-decoration: underline;
 }

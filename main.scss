@@ -56,7 +56,7 @@ section {
 
 //SECTION REUSABLE
 .container {
-  max-width: 150rem;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -140,7 +140,7 @@ section {
     linear-gradient(to right, var(--verylightred), var(--lightred));
   background-size: 170%;
   background-position: center;
-  height: 50vh;
+  height: 60vh;
   border-bottom-left-radius: 100px;
   &__hero {
     margin-top: 5rem;
@@ -293,7 +293,7 @@ section {
   .container {
     display: flex;
     align-items: center;
-
+    gap: 4.8rem;
     img {
       width: 50%;
       height: 100%;
@@ -301,3 +301,73 @@ section {
     }
   }
 }
+
+.footer {
+  padding: 4.8rem 0;
+  background-color: var(--verydarkblackblue);
+  border-top-right-radius: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30rem;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: var(--grayishblue);
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// <footer class="footer">
+// <div class="footer__logo"><img src="images/logo.svg" alt="Logo" /></div>
+// <div class="footer__links">
+//   <h4 class="fourth-heading">Product</h4>
+//   <ul class="footer__list">
+//     <li class="footer__item"><a href="#">Overview</a></li>
+//     <li class="footer__item"><a href="#">Pricing</a></li>
+//     <li class="footer__item"><a href="#">Marketplace</a></li>
+//     <li class="footer__item"><a href="#">Features</a></li>
+//     <li class="footer__item"><a href="#">Integrations</a></li>
+//   </ul>
+// </div>
+// <div class="footer__links">
+//   <h4 class="fourth-heading">Company</h4>
+//   <ul class="footer__list">
+//     <li class="footer__item"><a href="#">About</a></li>
+//     <li class="footer__item"><a href="#">Team</a></li>
+//     <li class="footer__item"><a href="#">Blog</a></li>
+//     <li class="footer__item"><a href="#">Careers</a></li>
+//   </ul>
+// </div>
+// <div class="footer__links">
+//   <h4 class="fourth-heading">Connect</h4>
+//   <ul class="footer__list">
+//     <li class="footer__item"><a href="#">Contact</a></li>
+//     <li class="footer__item"><a href="#">Newsletter</a></li>
+//     <li class="footer__item"><a href="#">Linkedlin</a></li>
+//   </ul>
+// </div>
+// </footer>
