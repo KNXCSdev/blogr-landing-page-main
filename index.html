@@ -38,6 +38,46 @@
             <button class="btn btn--white">Sign Up</button>
           </div>
         </nav>
+        <nav class="mobile">
+          <img src="images/logo.svg" alt="Blogr logo" />
+          <img src="images/icon-hamburger.svg" alt="Close" />
+          <div class="mobile__dropdown">
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a href="#">Product <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
+                <ul class="mobile__list-2">
+                  <li class="mobile__item-2"><a href="#">Overview</a></li>
+                  <li class="mobile__item-2"><a href="#">Pricing</a></li>
+                  <li class="mobile__item-2"><a href="#">Marketplace</a></li>
+                  <li class="mobile__item-2"><a href="#">Features</a></li>
+                  <li class="mobile__item-2"><a href="#">Integrations</a></li>
+                </ul>
+              </li>
+              <li class="mobile__item">
+                <a href="#">Company <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
+                <ul class="mobile__list-2">
+                  <li class="mobile__item-2"><a href="#">About</a></li>
+                  <li class="mobile__item-2"><a href="#">Team</a></li>
+                  <li class="mobile__item-2"><a href="#">Blog</a></li>
+                  <li class="mobile__item-2"><a href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="mobile__item">
+                <a href="#">Connect <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
+                <ul class="mobile__list-2">
+                  <li class="mobile__item-2"><a href="#">Contact</a></li>
+                  <li class="mobile__item-2"><a href="#">Newsletter</a></li>
+                  <li class="mobile__item-2"><a href="#">Linkedlin</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="mobile__buttons">
+              <button class="btn btn--mobile">Login</button>
+              <button class="btn btn--red">Sign Up</button>
+            </div>
+          </div>
+        </nav>
+
         <div class="header__hero">
           <h1 class="primary-heading">A modern publishing platform</h1>
           <p class="header__description">Grow your audience and build your online brand</p>
@@ -71,11 +111,14 @@
             </p>
           </div>
           <div class="future__img">
-            <img
-              src="images/illustration-editor-desktop.svg"
-              alt="Editor Desktop Img"
-              class="future__editor"
-            />
+            <picture>
+              <source media="(max-width:35em)" srcset="images/illustration-editor-mobile.svg" />
+              <img
+                src="images/illustration-editor-desktop.svg"
+                alt="Editor Desktop Img"
+                class="future__editor"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -101,7 +144,11 @@
 
     <section class="free">
       <div class="container">
-        <img src="images/illustration-laptop-desktop.svg" alt="laptop" />
+        <picture>
+          <source media="(max-width:35em)" srcset="images/illustration-LAPTOP-mobile.svg" />
+          <img src="images/illustration-laptop-desktop.svg" alt="laptop" />
+        </picture>
+
         <div class="free__desc">
           <h3 class="tertiary-heading">Free, open, simple</h3>
           <p class="description">

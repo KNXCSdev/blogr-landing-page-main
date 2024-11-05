@@ -5,10 +5,12 @@
   --verylightred: hsl(355, 100%, 74%); //(CTA hover background)
   --verydarkblue: hsl(208, 49%, 24%); //(headings)
   --verydarkgray: hsla(210, 2%, 82%, 0.212); //(headings)
+  --verydarkgray2: hsla(211, 10%, 48%, 0.788); //(headings)
 
   //### Neutral
   --white: hsl(0, 0%, 100%); //(text)
   --grayishblue: hsl(240, 2%, 79%); //(footer text)
+  --grayishbluee: hsla(240, 3%, 79%, 0.233);
   --verydarkgrayishblue: hsl(207, 13%, 34%); //(body copy)
   --verydarkblackblue: hsl(240, 10%, 16%); //(footer background)
 
@@ -132,6 +134,19 @@ section {
     color: var(--white);
     background-color: transparent;
   }
+
+  &--red {
+    background-image: linear-gradient(to right, var(--verylightred), var(--lightred));
+    color: var(--white);
+    padding: 2rem 8rem;
+    font-size: 2.4rem;
+  }
+
+  &--mobile {
+    font-size: 2.4rem;
+    color: var(--verydarkblue);
+    background-color: transparent;
+  }
 }
 
 //SECTION HEADER
@@ -248,6 +263,7 @@ section {
 
   .description {
     color: var(--grayishblue);
+    margin-bottom: 0;
   }
 
   &__img {
@@ -341,33 +357,181 @@ section {
   }
 }
 
-// <footer class="footer">
-// <div class="footer__logo"><img src="images/logo.svg" alt="Logo" /></div>
-// <div class="footer__links">
-//   <h4 class="fourth-heading">Product</h4>
-//   <ul class="footer__list">
-//     <li class="footer__item"><a href="#">Overview</a></li>
-//     <li class="footer__item"><a href="#">Pricing</a></li>
-//     <li class="footer__item"><a href="#">Marketplace</a></li>
-//     <li class="footer__item"><a href="#">Features</a></li>
-//     <li class="footer__item"><a href="#">Integrations</a></li>
-//   </ul>
-// </div>
-// <div class="footer__links">
-//   <h4 class="fourth-heading">Company</h4>
-//   <ul class="footer__list">
-//     <li class="footer__item"><a href="#">About</a></li>
-//     <li class="footer__item"><a href="#">Team</a></li>
-//     <li class="footer__item"><a href="#">Blog</a></li>
-//     <li class="footer__item"><a href="#">Careers</a></li>
-//   </ul>
-// </div>
-// <div class="footer__links">
-//   <h4 class="fourth-heading">Connect</h4>
-//   <ul class="footer__list">
-//     <li class="footer__item"><a href="#">Contact</a></li>
-//     <li class="footer__item"><a href="#">Newsletter</a></li>
-//     <li class="footer__item"><a href="#">Linkedlin</a></li>
-//   </ul>
-// </div>
-// </footer>
+.mobile {
+  display: none;
+  z-index: 9999;
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
+    position: absolute;
+    top: 15rem;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.171);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-bottom: 1px solid var(--grayishblue);
+    width: 100%;
+    font-weight: 500;
+    padding-bottom: 4rem;
+
+    &-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      text-align: center;
+      padding: 3rem;
+      background-color: var(--grayishbluee);
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    a:link,
+    a:visited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      text-decoration: none;
+      color: var(--verydarkblue);
+    }
+
+    &-2 {
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: var(--verydarkgray2);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 70em) {
+  html {
+    font-size: 55%;
+  }
+  .state__phone {
+    height: 250%;
+  }
+}
+
+@media only screen and (max-width: 55em) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 6rem 0;
+  }
+
+  .state {
+    &__phone {
+      transform: translate(-7rem, 3rem);
+
+      height: 220%;
+    }
+
+    &__desc {
+      z-index: 9999;
+    }
+  }
+
+  .future__all {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .future__img {
+    order: 0;
+    text-align: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  .future__desc {
+    order: 1;
+  }
+
+  .free {
+    .container {
+      flex-direction: column;
+      text-align: center;
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      padding-right: 5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    padding: 6rem 0;
+  }
+
+  .primary-heading {
+    text-align: center;
+  }
+
+  .state {
+    &__phone {
+      transform: translate(-6rem, 8rem);
+
+      height: 180%;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0;
+  }
+}
