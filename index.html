@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -40,12 +41,15 @@
         </nav>
         <nav class="mobile">
           <img src="images/logo.svg" alt="Blogr logo" />
-          <img src="images/icon-hamburger.svg" alt="Close" />
+          <button class="btn--menu">
+            <img src="images/icon-hamburger.svg" alt="Open" data-menu="open" />
+            <img src="images/icon-close.svg" alt="Close" data-menu="close" class="hidden" />
+          </button>
           <div class="mobile__dropdown">
             <ul class="mobile__list">
               <li class="mobile__item">
                 <a href="#">Product <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
-                <ul class="mobile__list-2">
+                <ul class="mobile__list-2 hidden">
                   <li class="mobile__item-2"><a href="#">Overview</a></li>
                   <li class="mobile__item-2"><a href="#">Pricing</a></li>
                   <li class="mobile__item-2"><a href="#">Marketplace</a></li>
@@ -55,7 +59,7 @@
               </li>
               <li class="mobile__item">
                 <a href="#">Company <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
-                <ul class="mobile__list-2">
+                <ul class="mobile__list-2 hidden">
                   <li class="mobile__item-2"><a href="#">About</a></li>
                   <li class="mobile__item-2"><a href="#">Team</a></li>
                   <li class="mobile__item-2"><a href="#">Blog</a></li>
@@ -64,7 +68,7 @@
               </li>
               <li class="mobile__item">
                 <a href="#">Connect <img src="images/icon-arrow-dark.svg" alt="Down Arrow" /></a>
-                <ul class="mobile__list-2">
+                <ul class="mobile__list-2 hidden">
                   <li class="mobile__item-2"><a href="#">Contact</a></li>
                   <li class="mobile__item-2"><a href="#">Newsletter</a></li>
                   <li class="mobile__item-2"><a href="#">Linkedlin</a></li>
